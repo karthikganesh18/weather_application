@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="weather css.css">
+  <style>
+    /* Your existing styles */
+    .box {
+      border: 1px solid #000;
+      width: 200px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .weather-info {
+      margin-top: 10px;
+    }
+  </style>
+
+</head>
+<body>
+
+<div class="box" id="searchBox">
+  <label for="locationInput">Enter location:</label>
+  <input type="text" id="locationInput">
+  <button id="searchButton" onclick="searchLocation()">Search</button>
+</div>
+
+<div class="box" id="errorMessage" style="display: none;">
+  <div class="message-box">
+    Location not found. Please try again.
+  </div>
+</div>
+
+<div class="box" id="weatherBox" style="display: none;">
+  <div class="weather-info">
+    <img id="weatherImage" src="" alt="Weather Image">
+  </div>
+  
+  <div class="weather-info" id="conditionBox">
+    <strong>Current Weather Condition:</strong> <span id="condition"></span>
+  </div>
+  <div class="weather-info" id="temperatureBox">
+    <strong>Temperature:</strong> <span id="temperature"></span>&deg;C
+  </div>
+  <div class="weather-info" id="humidityBox">
+    <strong>Humidity:</strong> <span id="humidity"></span>%
+  </div>
+  <div class="weather-info">
+    <i id="weatherIcon" class="fas fa-question weather-icon"></i>
+  </div>
+</div>
+
+
+   <script src="weather js.js"></script>
+
+
+</body>
+</html>
